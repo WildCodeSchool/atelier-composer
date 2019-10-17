@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog - Free Bulma template</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet'
+          href='https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.9.1/css/OverlayScrollbars.min.css'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- Bulma Version 0.7.5-->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.7.5/css/bulma.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+</head>
+
+<body>
+<!-- START NAV -->
+<nav class="navbar">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="../">
+                <img src="assets/logo.png"
+                     alt="Logo">
+            </a>
+            <span class="navbar-burger burger" data-target="navbarMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        </div>
+        <div id="navbarMenu" class="navbar-menu">
+        </div>
+    </div>
+</nav><!-- END NAV -->
+
+<header class="hero is-info is-medium is-bold">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h1 class="title">Atelier Composer</h1>
+        </div>
+    </div>
+</header>
+
+
+<main class="container">
+    <!-- START ARTICLE FEED -->
+    <section class="articles">
+        <div class="column is-8 is-offset-2">
+            <!-- START ARTICLE -->
+            <div class="card article">
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-content has-text-centered">
+                            <h2 class="title article-title">Installer Code Sniffer</h2>
+                        </div>
+                    </div>
+                    <div class="content article-body">
+                        <p>Code sniffer est un outil permettant de détecter les portions de code ne respectant pas les
+                            coding style définis.
+                            Il gère différentes règles dont les PSR-1 et PSR-2
+                        <div class="has-text-centered">
+                            <img class="" src="assets/sniffer.gif" alt="sniffer"/>
+                        </div>
+                        <h3 class="has-text-centered">Comment je l'installe ? Avec composer !</h3>
+                        <p>
+                        <ul>
+                            <li>Reprendre l’atelier POO (sur les chats),</li>
+                            <li>Installer composer</li>
+                            <li>Initialiser le projet (création du <i>composer.json</i>)</li>
+                            <li>Chercher le paquet <code>squizlabs/php_codesniffer</code> sur packagist</li>
+                            <li>L’installer via composer</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- END ARTICLE -->
+            <!-- START ARTICLE -->
+            <div class="card article">
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-content has-text-centered">
+                            <h2 class="title article-title">Utiliser Code Sniffer</h2>
+                        </div>
+                    </div>
+                    <div class="content article-body">
+                        <p>
+                            Code Sniffer s’installe dans le dossicer <i>vendor/</i>. Il se lance en ligne de commande :
+                        <pre>php vendor/bin/phpcs myFile.php</pre>
+                        </p>
+                        <p>
+                            De base il ne respecte pas les PSRs (mais d’autres règles). Il faut lui spécifier en option
+                            :
+                        <pre>php vendor/bin/phpcs --standard=PSR2 myFile.php</pre>
+                        </p>
+                        <p>
+                            Corrige les éventuelles erreurs détectées par code sniffer sur les fichiers du projet. </p>
+                    </div>
+                </div>
+            </div>
+            <!-- END ARTICLE -->
+        </div>
+
+    </section>
+    <!-- END ARTICLE FEED -->
+</main>
+
+<script async type="text/javascript" src="../js/bulma.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.9.1/js/OverlayScrollbars.min.js'></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        //The first argument are the elements to which the plugin shall be initialized
+        //The second argument has to be at least a empty object or a object with your desired options
+        OverlayScrollbars(document.querySelectorAll("body"), {});
+    });
+</script>
+</body>
+
+</html>
